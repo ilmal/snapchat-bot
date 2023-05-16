@@ -29,8 +29,9 @@ def send_snapchat(driver, user, message, meme=False):
             .click(text_box)\
             .perform()
         
+        text_box.send_keys(message)
+
         ActionChains(driver)\
-            .send_keys(message)\
             .send_keys(Keys.ENTER)\
             .perform()
         
